@@ -27,12 +27,12 @@ const server = app.listen(port, function() {
 });
 
 //GET route
-app.get('/', function(req, res) {
+app.get('/all', function(req, res) {
     res.send(projectData);
 });
 
 //POST route
-app.post('/', function(req, res) {
+app.post('/add', function(req, res) {
     let newData = req.body;
     let newEntry = {
         temperature: newData.temperature,
